@@ -1,0 +1,65 @@
+{
+  "A_instances": 60,
+  "A_kkt_residual_median": 0.0,
+  "A_t=1e-09": {
+    "median_gain": 1.2692719986162615e-08,
+    "gain_over_kkt_prediction_median": 1.0,
+    "within_20pct_of_prediction": "58/60",
+    "over_n_t_bound": 1,
+    "accepted_by_tolerant_verifier": 57,
+    "accepted_by_exact": 0,
+    "certified_gain_max": -3.3748889684065266e-09
+  },
+  "A_t=1e-07": {
+    "median_gain": 1.242408921076077e-06,
+    "gain_over_kkt_prediction_median": 1.0,
+    "within_20pct_of_prediction": "60/60",
+    "over_n_t_bound": 0,
+    "accepted_by_tolerant_verifier": 58,
+    "accepted_by_exact": 0,
+    "certified_gain_max": -3.374897462484065e-07
+  },
+  "A_t=1e-06": {
+    "median_gain": 1.2423879598655319e-05,
+    "gain_over_kkt_prediction_median": 1.0,
+    "within_20pct_of_prediction": "60/60",
+    "over_n_t_bound": 0,
+    "accepted_by_tolerant_verifier": 60,
+    "accepted_by_exact": 0,
+    "certified_gain_max": -3.3748972705484065e-06
+  },
+  "B_no_real_improvement": {
+    "worlds": 153,
+    "naive_claimed_gain_pts": 6.2,
+    "naive_true_gain_pts": -0.67,
+    "holdout_claimed_gain_pts": -1.29,
+    "holdout_true_gain_pts": -1.29,
+    "claims_win": {
+      "naive": 151,
+      "holdout": 50,
+      "lock": 12
+    },
+    "false_win (claimed, true gain <= 0)": {
+      "naive": 98,
+      "holdout": 9,
+      "lock": 0
+    }
+  },
+  "B_real_improvement_possible": {
+    "worlds": 147,
+    "naive_claimed_gain_pts": 10.01,
+    "naive_true_gain_pts": 3.53,
+    "holdout_claimed_gain_pts": 2.12,
+    "holdout_true_gain_pts": 2.27,
+    "claims_win": {
+      "naive": 147,
+      "holdout": 83,
+      "lock": 38
+    },
+    "false_win (claimed, true gain <= 0)": {
+      "naive": 54,
+      "holdout": 10,
+      "lock": 0
+    }
+  }
+}

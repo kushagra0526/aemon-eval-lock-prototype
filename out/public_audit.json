@@ -5,8 +5,7 @@
   "min_pair_gap": 7.166487294361127e-09,
   "min_wall_gap": 7.85235099e-09,
   "kkt_residual": 0.415,
-  "slack_value_1e6": 1.5525671685027806e-05,
-  "polished_certified": "2.6359773947543245"
+  "slack_value_1e6": 1.5525671685027806e-05
  },
  "alphaevolve_square_32": {
   "valid": true,
@@ -14,8 +13,7 @@
   "min_pair_gap": 7.898057438919307e-09,
   "min_wall_gap": 6.300614e-09,
   "kkt_residual": 3.15,
-  "slack_value_1e6": 1.3553796117550648e-05,
-  "polished_certified": "2.9395727712060033"
+  "slack_value_1e6": 1.3553796117550648e-05
  },
  "alphaevolve_rect4_21": {
   "valid": true,
@@ -29,8 +27,7 @@
   "min_pair_gap": 1.6157640655236392e-10,
   "min_wall_gap": 7.886e-11,
   "kkt_residual": 0.0,
-  "slack_value_1e6": 1.563598308491761e-05,
-  "polished_certified": "2.6359830849175199"
+  "slack_value_1e6": 1.563598308491761e-05
  },
  "slack_on_aemon_26": {
   "1e-09": {

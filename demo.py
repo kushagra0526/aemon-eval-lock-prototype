@@ -6,10 +6,8 @@ python demo.py
 """
 import json
 
-import numpy as np
-
 from evallock.packing import certify, check_exact, check_float
-from evallock.slack import multipliers, reoptimize, solve
+from evallock.slack import multipliers, reoptimize
 
 D = json.load(open("data/public_constructions.json"))
 SHINKA = {"relaxed_1e-6": "2.635983099011548", "post-processed": "2.6359828390115476", "exact_replication": "2.63597770931127"}
@@ -24,12 +22,9 @@ for k, v in D.items():
     if v["kind"] == "square":
         m = multipliers(v["circles"])
         line.update(kkt_residual=round(m["kkt_residual"], 3), slack_value_1e6=1e-6 * m["sum_lambda"])
-        a = np.asarray(v["circles"], float)
-        pol = solve(a.ravel(), len(a)).reshape(len(a), 3)
-        line["polished_certified"] = certify(pol.tolist())["certified_str"]
     card[k] = line
     print(f"  {k:<22} valid={r['valid']}  sum {r['sum_str']}  min gaps {r['min_pair_gap']:.1e} / {r['min_wall_gap']:.1e}"
-          + (f"  KKT residual {line['kkt_residual']}  local polish -> {line['polished_certified']}" if "kkt_residual" in line else ""))
+          + (f"  KKT residual {line['kkt_residual']}" if "kkt_residual" in line else ""))
 
 a = D["aemon_square_26"]["circles"]
 print("\nWHAT A TOLERANT VERIFIER ADDS to the n=26 packing above (a search allowed to use the slack):")
